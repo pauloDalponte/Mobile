@@ -14,10 +14,12 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -45,6 +47,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Column {
+        Spacer(modifier = Modifier.weight(1f))
         Row {
             Text(
                 text = "Enviar",
@@ -53,106 +56,218 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                     .padding(end = 2.dp),
                 textAlign = TextAlign.End,
                 style = TextStyle(
-                    fontSize = 32.sp)
+                    fontSize = 32.sp
+                )
             )
         }
+        Spacer(modifier = Modifier.height(6.dp))
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceAround
         ) {
             Button(onClick = { },
-                modifier = Modifier.weight(1f)
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color.DarkGray,
+                    contentColor = Color.White
+                ),
+                modifier = Modifier
+                        .weight(1f)
+                        .height(100.dp)
             ) {
                 Text("9")
             }
-            Spacer(modifier = Modifier.width(8.dp))
+            Spacer(modifier = Modifier.width(6.dp))
             Button(onClick = { },
-                modifier = Modifier.weight(1f)) {
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color.DarkGray,
+                    contentColor = Color.White
+                ),
+                modifier = Modifier
+                    .weight(1f)
+                    .height(100.dp)
+            ) {
                 Text("8")
             }
             Spacer(modifier = Modifier.width(8.dp))
             Button(onClick = { },
-                modifier = Modifier.weight(1f)) {
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color.DarkGray,
+                    contentColor = Color.White
+                ),
+                modifier = Modifier.weight(1f)
+                    .height(100.dp)
+            ) {
                 Text("7")
             }
             Spacer(modifier = Modifier.width(8.dp))
             Button(onClick = { },
-                modifier = Modifier.weight(1f)) {
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color.Yellow,
+                    contentColor = Color.Black
+                ),
+                modifier = Modifier
+                    .weight(1f)
+                    .height(100.dp)
+            ) {
                 Text("*")
             }
         }
+        Spacer(modifier = Modifier.height(6.dp))
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceAround
         ) {
             Button(onClick = { },
-                modifier = Modifier.weight(1f)
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color.DarkGray,
+                    contentColor = Color.White
+                ),
+                modifier = Modifier
+                    .weight(1f)
+                    .height(100.dp)
             ) {
                 Text("6")
             }
             Spacer(modifier = Modifier.width(8.dp))
             Button(onClick = { },
-                modifier = Modifier.weight(1f)) {
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color.DarkGray,
+                    contentColor = Color.White
+                ),
+                modifier = Modifier
+                    .weight(1f)
+                    .height(100.dp)
+            ) {
                 Text("5")
             }
             Spacer(modifier = Modifier.width(8.dp))
             Button(onClick = { },
-                modifier = Modifier.weight(1f)) {
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color.DarkGray,
+                    contentColor = Color.White
+                ),
+                modifier = Modifier
+                    .weight(1f)
+                    .height(100.dp)
+            ) {
                 Text("4")
             }
             Spacer(modifier = Modifier.width(8.dp))
             Button(onClick = { },
-                modifier = Modifier.weight(1f)) {
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color.Yellow,
+                    contentColor = Color.Black
+                ),
+                modifier = Modifier
+                    .weight(1f)
+                    .height(100.dp)
+            ) {
                 Text("/")
             }
         }
+        Spacer(modifier = Modifier.height(6.dp))
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceAround
         ) {
             Button(onClick = { },
-                modifier = Modifier.weight(1f)) {
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color.DarkGray,
+                    contentColor = Color.White
+                ),
+                modifier = Modifier
+                    .weight(1f)
+                    .height(100.dp)
+            ) {
                 Text("3")
             }
             Spacer(modifier = Modifier.width(8.dp))
             Button(onClick = { },
-                modifier = Modifier.weight(1f)) {
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color.DarkGray,
+                    contentColor = Color.White
+                ),
+                modifier = Modifier
+                    .weight(1f)
+                    .height(100.dp)
+            ) {
                 Text("2")
             }
             Spacer(modifier = Modifier.width(8.dp))
             Button(onClick = { },
-                modifier = Modifier.weight(1f)) {
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color.DarkGray,
+                    contentColor = Color.White
+                ),
+                modifier = Modifier
+                    .weight(1f)
+                    .height(100.dp)
+            ) {
                 Text("1")
             }
             Spacer(modifier = Modifier.width(8.dp))
             Button(onClick = { },
-             modifier = Modifier.weight(1f)
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color.Yellow,
+                    contentColor = Color.Black
+                ),
+             modifier = Modifier
+                 .weight(1f)
+                 .height(100.dp)
             ) {
                 Text("-")
             }
         }
+        Spacer(modifier = Modifier.height(6.dp))
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceAround
         ) {
             Button(onClick = { },
-                modifier = Modifier.weight(1f)
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color.Yellow,
+                    contentColor = Color.Black
+                ),
+                modifier = Modifier
+                    .weight(1f)
+                    .height(100.dp)
             ) {
                 Text(",")
             }
             Spacer(modifier = Modifier.width(8.dp))
             Button(onClick = { },
-                modifier = Modifier.weight(1f)) {
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color.DarkGray,
+                    contentColor = Color.White
+                ),
+                modifier = Modifier
+                    .weight(1f)
+                    .height(100.dp)
+            ) {
                 Text("0")
             }
             Spacer(modifier = Modifier.width(8.dp))
             Button(onClick = { },
-                modifier = Modifier.weight(1f)) {
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color.Yellow,
+                    contentColor = Color.Black
+                ),
+                modifier = Modifier
+                    .weight(1f)
+                    .height(100.dp)
+            ) {
                 Text("=")
             }
             Spacer(modifier = Modifier.width(8.dp))
             Button(onClick = { },
-                modifier = Modifier.weight(1f)) {
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color.Yellow,
+                    contentColor = Color.Black
+                ),
+                modifier = Modifier
+                    .weight(1f)
+                    .height(100.dp)
+            ) {
                 Text("+")
             }
         }
